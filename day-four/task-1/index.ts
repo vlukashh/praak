@@ -1,4 +1,10 @@
-async function cleanUserData(users: { name: string; email: string; isActive: boolean }[]): Promise<any[]> {
+interface lUser {
+    name: string;
+    email: string;
+    isActive: boolean
+}
+
+async function cleanUserData(users: lUser[]): Promise<lUser[]> {
     if (Math.random() < 0.1) {
         throw new Error("Случайная ошибка при обработке данных"); 
     }

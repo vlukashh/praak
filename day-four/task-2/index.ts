@@ -26,8 +26,9 @@ function groupGadgetsByUser(users: UserWithGadget[]): UserWithGadgets[] {
             result[user.id].gadgets.push(user.gadget);
         } else {
             result[user.id] = {
-                id: user.id,
-                name: user.name,
+                // id: user.id,
+                // name: user.name,
+                ...user,
                 gadgets: [user.gadget],
             };
         }
